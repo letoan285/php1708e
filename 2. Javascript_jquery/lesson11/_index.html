@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Lesson 11 | jQuery</title>
+	<link rel="stylesheet" href="">
+	<!-- <script type="text/javascript" src="js/jquery.min.js"></script> -->
+</head>
+<body>
+	<button onclick="load_ajax();">Load data</button>
+	<br><hr>
+	<div id="result">Ajax Result here...</div>
+	<script>
+		function load_ajax(){
+			//1. khai bao doi tuong
+			var xmlhttp;
+			//2. kiem tra tuong thich trinh duyet
+			if (window.XMLHttpRequest) {
+				//chrom, firefox, opera...
+				xmlhttp = new XMLHttpRequest();
+			} else {
+				//IE xmlhttp object
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			//3. khoi tao ham ajax
+			xmlhttp.onreadystatechange = function(){
+				if (xmlhttp.readyState == 4 && xmlhttp.status ==200) {
+					document.getElementById("result").innerHTML = xmlhttp.responseText;
+				}
+			}
+			//4. thuc hien ham va load ajax
+			xmlhttp.open('GET', 'demo.html', true);
+			xmlhttp.send();
+		}
+		
+	</script>
+	
+</body>
+</html>

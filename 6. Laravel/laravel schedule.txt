@@ -1,0 +1,8 @@
+1. cau truc thu muc
+2. artisan command line
+3. routes
+4. blade view
+4. migration
+6. tinker
+5. controller
+6. relationship

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>jQuery | Shopping_car</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">My shop</a>
+			</div>
+	
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Sản phẩm</a></li>
+					<li><a href="#">Liên hệ</a></li>
+					<li><a href="#">Thông tin</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Tài khoản</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<div class="row">
+		<div class="container">
+			<div class="col-md-3">
+				<div class="list-group">
+					<a href=""><div class="list-group-item active"> <b>Danh mục sản phẩm	</b></div></a>
+					<a href=""><div class="list-group-item">Apple</div></a>
+					<a href=""><div class="list-group-item">Samsung</div></a>
+					<a href=""><div class="list-group-item">Oppo</div></a>
+					<a href=""><div class="list-group-item">Hua wei</div></a>
+					<a href=""><div class="list-group-item">HP</div></a>
+					<a href=""><div class="list-group-item">Laptop khác</div></a>
+					<a href=""><div class="list-group-item">Điện thoại khác</div></a>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div id="carousel-id" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-id" data-slide-to="0" class=""></li>
+						<li data-target="#carousel-id" data-slide-to="1" class=""></li>
+						<li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="item">
+							<img class="img-slide" data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="images/slide1.jpg">
+							<div class="container">
+								<div class="carousel-caption">
+									<h1>Example headline.</h1>
+					
+									<p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<img class="img-slide" data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Second slide" src="images/slide2.png">
+							<div class="container">
+								<div class="carousel-caption">
+									<h1>Another example headline.</h1>
+							
+									<p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+								</div>
+							</div>
+						</div>
+						<div class="item active">
+							<img class="img-slide" data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide" src="images/slide3.jpg">
+							<div class="container">
+								<div class="carousel-caption">
+									<h1>One more for good measure.</h1>
+					
+									<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+					<a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3 class="container product-heading">Sản phẩm bán chạy</h3>
+	<div class="row">
+		<div class="container">
+			
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 product-box">
+				<div id="pro-1" class="thumbnail clearfix ">
+					<img class="pro-img" src="images/samsung.jpg" alt="">
+					<p class="productName">Galaxy s8</p>
+					<p class="btn btn-warning btn-sm">$ <span id="price">300</span></p>
+					<button productId="1" class="btn btn-success btn-sm pull-right btn_add">Add to cart</button>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 product-box">
+				<div id="pro-2" class="thumbnail clearfix ">
+					<img class="pro-img" src="images/iphone7.png" alt="">
+					<p class="productName">Iphone 7</p>
+					<p class="btn btn-warning btn-sm">$ <span id="price">600</span></p>
+					<button productId="2" class="btn btn-success btn-sm pull-right btn_add">Add to cart</button>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 product-box">
+				<div id="pro-3" class="thumbnail clearfix ">
+					<img class="pro-img" src="images/iphone8.jpg" alt="">
+					<p class="productName">Iphone 8.</p>
+					<p class="btn btn-warning btn-sm">$ <span id="price">1200</span></p>
+					<button productId="3" class="btn btn-success btn-sm pull-right btn_add">Add to cart</button>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 product-box">
+				<div id="pro-4" class="thumbnail clearfix ">
+					<img class="pro-img" src="images/oppo.jpg" alt="">
+					<p class="productName">OPPO x1.</p>
+					<p class="btn btn-warning btn-sm">$ <span id="price">300</span></p>
+					<button productId="4" class="btn btn-success btn-sm pull-right btn_add">Add to cart</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3 class="container product-heading">Sản phẩm khuyến mãi</h3>
+	<div class="row">
+		<div class="container">
+			
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 product-box">
+				<div id="pro-5" class="thumbnail clearfix ">
+					<img class="pro-img" src="images/huawei.png" alt="">
+					<p class="productName">Huawei h1.</p>
+					<p class="btn btn-warning btn-sm">$ <span id="price">800</span></p>
+					<button productId="5" class="btn btn-success btn-sm pull-right btn_add">Add to cart</button>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<div id="pro-6" class="thumbnail clearfix ">
+					<img class="pro-img" src="images/macbook.jpg" alt="">
+					<p class="productName">Macbook 2.</p>
+					<p class="btn btn-warning btn-sm">$ <span id="price">2300</span></p>
+					<button productId="6" class="btn btn-success btn-sm pull-right btn_add">Add to cart</button>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<div id="pro-7" class="thumbnail clearfix ">
+					<img class="pro-img" src="images/dell.jpg" alt="">
+					<p class="productName">Dell Inspiron.</p>
+					<p class="btn btn-warning btn-sm">$ <span id="price">1300</span></p>
+					<button productId="7" class="btn btn-success btn-sm pull-right btn_add">Add to cart</button>
+				</div>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+				<div id="pro-8" class="thumbnail clearfix ">
+					<img class="pro-img" src="images/hp.png" alt="">
+					<p class="productName">HP Laptop.</p>
+					<p class="btn btn-warning btn-sm">$ <span id="price">1000</span></p>
+					<button productId="8" class="btn btn-success btn-sm pull-right btn_add">Add to cart</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="container">
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Tên sản phẩm</th>
+					<th width="80">Hình ảnh</th>
+					<th width="20%">Lựa chọn</th>
+					<th>Giá bán</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Dell</td>
+					<td>
+						<img width="80" src="images/dell.jpg" alt="">
+					</td>
+					<td>
+						<input type="number" name="" value="1" min="0" step="1">
+						<button type="button" class="btn btn-xs btn-info">
+							<span class="glyphicon glyphicon-remove"></span>
+						</button>
+					</td>
+					<td>
+						<b>$<span class="unit-price">22</span></b>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">Tổng cộng</td>
+					<td ><b>$<span class="unit-price">22</span></b></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<footer style="width: 100%; height: 300px; background: #ccc">
+		<div class="container">
+			<p class="text-center">Copyright: <strong>MyShop</strong>  2015-2017</p>
+
+		</div>
+	</footer>
+
+
+	
+	<!-- <script type="text/javascript" src="js/main.js"></script> -->
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			
+		});
+	</script>
+</body>
+</html>

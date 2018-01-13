@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Lesson 11 | jQuery</title>
+	<link rel="stylesheet" href="">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+	<button>click me</button>
+	<br><hr>
+	<div id="result"></div>
+	<ul id="demo"></ul>
+	<!-- 	<p>Hello Vietnam</p>
+		<p id="myId" title="hello_vietnam">Hello USA</p>
+		<div>Hello England</div>
+	<div>
+		<div>Hello Singapore</div>
+	</div>
+	<div id="demo">content of the div</div> -->
+	<!-- <div id="rs"></div>
+	<table border="1">
+		<tr>
+			<td>#</td>
+			<td>name</td>
+			<td>email</td>
+			<td>password</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>someone</td>
+			<td>email@gmail.com</td>
+			<td>password@123456</td>
+		</tr>
+	</table> -->
+
+	<!-- <input type="text" id="input_txt"> -->
+	<!-- <div id="demo">
+		<h3>This is first h3</h3>
+		<h3>
+			<p style="color: green;" id="demo1">this is p tag</p>
+		</h3>
+	</div> -->
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// var a = ['toan', 'le', 'nguey'];
+			// $.each(a, function( index, element ) {
+			//   console.log(index + " : " + element );
+			// });
+			// $('button').click(function(){
+			// 	$('p').before('<small>This is small tag</small>');
+			// });
+
+			// $('button').click(function(){
+			// 	$('p').after('<small>This is small tag</small>');
+			// });
+			// $('button').click(function(){
+			// 	var x = $('#myId').attr('title');
+			// 	console.log(x);
+			// });
+
+			// $('button').click(function(){
+			// 	$('div').css('background', 'red');
+			// });
+			
+			// $('button').click(function(){
+			// 	var result = $('#input_txt').val();
+			// 	console.log(result);
+
+			// });
+			// $('button').click(function(){
+			// 	var result = $('#demo').text();
+			// 	console.log(result);
+
+			// });
+			// $('button').click(function(){
+			// 	$('#rs').text('<h2>Hello result</h2>');
+			// 	// console.log(result);
+
+			// });
+			// $('button').click(function(){
+			// 	$('#rs').html('<h2>Hello result</h2>');
+			// 	// console.log(result);
+
+			// });
+			// $('button').click(function(){
+			// 	$('table').empty();
+			// 	// console.log(result);
+
+			// });
+			// $('button').click(function(){
+			// 	// $('table').empty();
+			// 	// console.log(result);
+			// 	$('#demo').find('#demo1').css('color', 'red');
+
+			// });
+
+			// var a = ['toan', 'le', 'nguey'];
+			// $.each(a, function( index, element ) {
+			//   console.log(index + " : " + element );
+			// });
+			// var arr = {
+			// 	name: 'Toan',
+			// 	age: 32,
+			// 	email: 'toan@gmail.com'
+			// }
+			// document.write(` My name is ${arr.name} and I am ${arr.age}`);
+			// $('button').click(function(){
+			// 	$('#result').load('demo.html');
+			// });
+			// $('button').click(function(){
+			// 	$.get('demo.html', function(data){
+			// 		$('#result').html(data);
+
+			// 	});
+			// });
+			// $('button').click(function(){
+			// 	$.getJSON('users.json', function(data){
+			// 		$.each(data, function(i, user){
+			// 			$('ul#demo').append('<li>'+user.firstName+'</li>')
+			// 		});
+			// 	});
+			// });
+
+			// $.ajax({
+			// 	method: 'GET',
+			// 	url: 'https://jsonplaceholder.typicode.com/posts',
+			// 	dataType: 'json'
+			// }).done(function(data){
+			// 	// console.log(data);
+			// 	$.map(data, function(post, i){	
+			// 		$('#result').append('<h3>'+ post.title +'</h3><p>'+post.body+'</p>');
+			// 	});
+			// });
+
+			// $.ajax({
+			// 	method: 'GET',
+			// 	url: 'https://jsonplaceholder.typicode.com/posts',
+			// 	dataType: 'json'
+			// }).done(function(data){
+			// 	$.map(data, function(post, i){
+			// 		$('#result').append(`<h2>${post.title}</h2>  <p>${post.body}</p><hr>`);
+			// 	});
+			// });
+
+			// var a = ['toan', 'le', 'nguey'];
+			// $.each(a, function( index, element ) {
+			//   console.log(index + " : " + element );
+			// });
+			// var arr = {
+			// 	name: 'Toan',
+			// 	age: 32,
+			// 	email: 'toan@gmail.com'
+			// }
+			// document.write(` My name is ${arr.name} and I am ${arr.age}`);
+			// $('button').click(function(){
+			// 	$('#result').load('demo.html');
+			// });
+			// $('button').click(function(){
+			// 	$.get('demo.html', function(data){
+			// 		$('#result').html(data);
+
+			// 	});
+			// });
+			// $('button').click(function(){
+			// 	$.getJSON('users.json', function(data){
+			// 		$.each(data, function(i, user){
+			// 			$('ul#demo').append('<li>'+user.firstName+'</li>')
+			// 		});
+			// 	});
+			// });
+
+			$.ajax({
+				method: 'GET',
+				url: 'https://jsonplaceholder.typicode.com/posts',
+				dataType: 'json'
+			}).done(function(data){
+				console.log(data);
+				$.map(data, function(post, index){
+					$('#result').append(`<h2>${post.title}</h2> <p>${post.body}</p> <hr>`);
+				});
+			});
+
+
+		});
+	</script>
+</body>
+</html>

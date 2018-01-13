@@ -1,0 +1,18 @@
+.pro-img{
+	height: 250px !important;
+}
+
+.img-slide{
+	height: 400px !important;
+	width: 100%;
+}
+.list-group-item{
+	height: 50px;
+}
+
+.product-heading {
+	height: 50px;
+	width: 1110px;
+	line-height: 50px;
+	background: skyblue;
+}
